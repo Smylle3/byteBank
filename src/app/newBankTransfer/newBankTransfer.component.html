@@ -1,0 +1,33 @@
+<div class="container">
+  <form class="formContainer" (ngSubmit)="setNewTrasnfer()">
+    <h2>Nova Transferência</h2>
+
+    <fieldset class="inputGroup">
+      <label for="value" class="labelGroup">Valor - R$</label>
+      <input
+        id="value"
+        type="number"
+        class="myInput"
+        [(ngModel)]="value"
+        name="value"
+        placeholder="0,00"
+        autofocus
+      />
+    </fieldset>
+
+    <fieldset class="inputGroup">
+      <label for="destinyAccount" class="labelGroup">Conta destino</label>
+      <input
+        id="destinyAccount"
+        type="text"
+        class="myInput"
+        [(ngModel)]="destiny"
+        name="destiny"
+        placeholder="XXX-X"
+      />
+    </fieldset>
+
+    <button type="submit" class="myButton">TRANSFERIR</button>
+    <a routerLink="/extract" class="myButton">EXTRATO</a>
+  </form>
+</div>
